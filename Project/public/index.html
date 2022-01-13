@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Search Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.js" type="text/javascript"></script>
+        <link rel="icon" type="image/x-icon" href="assets/aueb-emblem.jpg">
+    </head>
+    <body>
+        <header>
+            <img src="assets/aueb-logo.jpg" alt="AUEB Logo">
+        </header>
+        <div id="menu"></div>
+        <main>
+            <script id="template" type="text/x-handlebars-template">
+                <h1 id="title">The courses that match your search criteria are:</h1>
+                <ul>
+                {{#each this}}    
+                    <section class="course">
+                        <img src="https://elearning-aueb.herokuapp.com/static/images/{{img}}" alt="Course Image">
+                        <div class="text">
+                            <h1><u>{{title}}</u></h1>
+                            <h3>Course Objectives</h3>
+                            <h4>{{objectives}}</h4>
+                            <h3>Course Description</h3>
+                            <h4>{{description}}</h4>
+                        </div>
+                    </section>
+                {{/each}}
+                </ul>
+            </script>
+            <script id="template-2" type="text/x-handlebars-template">
+                {{#each this}}    
+                    <a href="courses.html?category={{id}}" class="category">{{title}}</a>
+                {{/each}}
+            </script>
+            <h1>Search AUEB e-Learning Courses</h1>
+            <form action="">
+                <input type="text" id="search" placeholder="  Search.." name="search">
+                <button type="submit" id="btn"><i class="fa fa-search"></i></button>
+            </form>
+            <div id="container"></div>
+            <a id="register-link" href="register.html">Don't have an account? Register here!</a><br>
+            <a id="register-link" href="profile.html">Already have an account? Sign in here!</a>
+        </main>
+    </body>
+</html>
