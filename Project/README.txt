@@ -1,7 +1,7 @@
 How to run the application properly:
 
 
-Step 1) Open index.js in VS Code
+Step 1) Open index.js (for example in VS Code)
 
 Step 2) Run nodemon index.js in the terminal
 
