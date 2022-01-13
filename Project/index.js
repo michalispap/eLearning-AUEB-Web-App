@@ -51,7 +51,7 @@ class User {
   }
 }
 
-const USERS = [new User(0, 'MICHAIL', 'PAPAPETROS', '6936964490', 'Egeou Pelagous 89', 'Athens', 'Greece', 'michalispap99@gmail.com', '!a123456', '!a123456', 'Undergraduate Degree')];
+const USERS = [];
 var newUser = new User();
 
 //Use Case 4
