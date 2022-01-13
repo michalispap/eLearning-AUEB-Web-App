@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Registration Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="style.css">
+        <script src="app-3.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.js" type="text/javascript"></script>
+        <link rel="icon" type="image/x-icon" href="assets/aueb-emblem.jpg">
+    </head>
+    <body>
+        <header>
+            <img src="assets/aueb-logo.jpg" alt="AUEB Logo">
+        </header>
+        <main id="register-main">
+            <h1>Registration Form</h1>
+            <div class="form-div">
+                <form id="sign-up-form" autocomplete="on">
+                    <label for="input-first-name">First Name</label>
+                    <input name="firstName" type="text" id="input-first-name" placeholder="John" required pattern="[A-Za-z]{1,20}" title="Only letters (max: 20)">
+                    <label for="input-last-name">Last Name</label>
+                    <input name="lastName" type="text" id="input-last-name" placeholder="Doe" required pattern="[A-Za-z]{1,20}" title="Only letters (max: 20)">
+                    <label for="input-phone">Phone Number</label>
+                    <input name="phoneNumber" type="tel" id="input-phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="6912345678" required title='Please include the "-" as shown in the example'>
+                    <label for="input-address">Street Address</label>
+                    <input name="streetAddress" type="text" id="input-address" placeholder="221B Baker Street" pattern="[A-Za-z0-9\s]{1,}" required title="Don't include special characters">
+                    <label for="input-city">City</label>
+                    <input name="city" type="text" id="input-city" placeholder="London" required pattern="[A-Za-z]{1,20}" title="Only letters (max: 20)">
+                    <label for="input-country">Country</label>
+                    <input name="country" type="text" id="input-country" placeholder="England" required pattern="[A-Za-z]{1,20}" title="Only letters (max: 20)">
+                    <label for="input-email">Registration Email Address</label>
+                    <input name="emailAddress" type="email" id="input-email" placeholder="john@doe.com" required>
+                    <label for="input-password">Password</label>
+                    <input type="password" id="input-password" name="password" placeholder="********" required pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).{8,}" title="Must contain at least one number, one letter, one special character (!@#$%^&*) and at least 8 or more characters">
+                    <label for="input-password-2">Verify Password</label>
+                    <input type="password" id="input-password-2" name="verifyPassword" required title="Must match above password" placeholder="********">
+                    <label for="input-status">Which of the following describes best your level of education?</label>
+                    <select class="input-status" name="education">
+                        <option value="High-school diploma">High School Diploma</option>
+                        <option value="Undergraduate degree">Undergraduate Degree</option>
+                        <option value="Master's degree">Master's Degree</option>
+                        <option value="PhD">PhD</option>
+                    </select>
+                    <input type="submit" value="Submit" id="input-submit">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

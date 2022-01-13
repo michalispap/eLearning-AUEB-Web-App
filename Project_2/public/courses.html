@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Courses Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="style.css">
+        <script src="app-2.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.js" type="text/javascript"></script>
+        <link rel="icon" type="image/x-icon" href="assets/aueb-emblem.jpg">
+    </head>
+    <body>
+        <header>
+            <img src="assets/aueb-logo.jpg" alt="AUEB Logo">
+        </header>
+        <main>
+            <a id="return" href="index.html">Return to Home Page</a>
+            <div id="category-title"></div>
+            <div id="category-courses"></div>
+        </main>
+        <script id="template-3" type="text/x-handlebars-template"> 
+            <h1>{{title}}</h1>
+        </script>
+        <script id="template-4" type="text/x-handlebars-template"> 
+            {{#each this}} 
+                <section class="course">
+                    <img src="https://elearning-aueb.herokuapp.com/static/images/{{img}}" alt="Course Image">
+                    <div class="text">
+                        <h1><u>{{title}}</u></h1>
+                        <h3>Course Objectives</h3>
+                        <h4>{{objectives}}</h4>
+                        <h3>Course Description</h3>
+                        <h4>{{description}}</h4>
+                    </div>
+                </section>
+            {{/each}}
+        </script>
+    </body>
+</html>

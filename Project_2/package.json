@@ -1,0 +1,15 @@
+{
+  "name": "p3170030-p3180149",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express-path": "^0.3.8"
+  }
+}
