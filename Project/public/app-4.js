@@ -13,7 +13,6 @@ window.onload = function () {
             body: JSON.stringify(data)
         })
         .then(response => {
-            console.log(response);
             if (!response.ok) {
                 document.getElementById('sign-in-main').innerHTML = "";
                 document.getElementById('user-info').innerHTML = "<h1><b>Username or password is incorrect</b></h1>";
