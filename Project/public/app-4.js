@@ -5,7 +5,7 @@ window.onload = function () {
         e.preventDefault();
         const data = {}
         new FormData(form).forEach((value, key) => data[key] = value)
-        fetch(`http://localhost:3000/sign-in`, {
+        fetch(`/sign-in`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ window.onload = function () {
                 document.getElementById('user-info').innerHTML += "<a href='profile.html'>Return to Sign in Page</a>";
             }
             else {
-                fetch(`http://localhost:3000/sign-in`)
+                fetch(`/sign-in`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('sign-in-main').innerHTML = "";
